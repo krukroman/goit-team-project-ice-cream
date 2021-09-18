@@ -1,0 +1,41 @@
+//common styles for page buttons
+
+/*  Як користуватись базовими стилями кнопок?
+    Якщо у вас в секції є посилання чи кнопка (білого або червоного фону), 
+    на це посилання чи кнопку вішаємо класи: 
+    "btn btn--main (для кнопки з білим фоном) або btn--secondary (для кнопки з червоним фоно) назвасеції__btn"
+    Приклад: class="btn btn--main header__btn"
+    позиціонування, дсплей, паддінг, марджин, шрифти, кольори,
+    навішувати вже на клас назвасеції__btn
+*/
+
+.btn {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  @include font(16px, bold, 1.31);
+  transition: background 250ms linear;
+  //.btn--main
+  &--main {
+    background: $primary-bgc;
+    color: $secondary-accent-color;
+    //hover/focus on .btn--main
+    &:hover,
+    &:focus {
+      background: $primary-hover-bgc;
+    }
+  }
+  //.btn--secondary
+  &--secondary {
+    background: $secondary-accent-color;
+    color: $primary-bgc;
+    //hover/focus on .btn--secondary
+    &:hover,
+    &:focus {
+      background: $secondary-hover-bgc;
+    }
+  }
+}

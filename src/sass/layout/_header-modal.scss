@@ -1,0 +1,199 @@
+.header-modal {
+  padding: 30px 15px;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 85vh;
+  width: 95vw;
+  background: #fff;
+  border-radius: 8px;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms linear;
+  box-shadow: 0 5px 5px #c7133db0;
+
+  body.header-modal-open & {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+.header-modal__title {
+  display: block;
+  text-align: center;
+  @include font(16px, bold, 1.15);
+}
+
+.header-modal__form {
+  margin-top: 10px;
+  display: grid;
+  row-gap: 5px;
+}
+// .header-modal__label {
+// }
+.header-modal__description {
+  display: block;
+  margin-bottom: 4px;
+  @include font(12px, normal, 1.15);
+}
+.header-modal__input,
+.header-modal__textarea {
+  display: block;
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  @include font(14px, normal, 1.2);
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: border-color 250ms linear;
+  .header-modal__label:hover & {
+    border-color: $primary-accent-color;
+  }
+  &:focus {
+    border-color: $primary-accent-color;
+  }
+}
+.header-modal__textarea {
+  resize: none;
+  height: 75px;
+}
+.header-modal__agreement {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-checkbox__icon {
+  display: block;
+  margin-right: 8px;
+  border: 2px solid #333;
+  border-radius: 2px;
+  fill: transparent;
+  transition: fill 250ms linear, background 250ms linear, border-color 250ms linear;
+
+  .header-modal-checkbox:checked + & {
+    fill: $primary-text-color;
+    background: $primary-accent-color;
+    border-color: $primary-accent-color;
+  }
+}
+.header-modal-checkbox__text {
+  display: block;
+  @include font(12px, normal, 1.5);
+}
+
+.header__modal-checkbox__link {
+  text-decoration: underline;
+  color: $secondary-accent-color;
+}
+.header-modal__form-btn {
+  margin-top: 10px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 30px;
+  &:hover,
+  &:focus {
+    background: #c7133e;
+  }
+}
+.header-modal__form__btn__icon {
+  margin-left: 15px;
+  height: 10px;
+  width: 6px;
+  stroke: $primary-text-color;
+}
+
+.header-modal__close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.header-modal__close-icon {
+  display: block;
+  stroke: #333;
+  transition: stroke 250ms linear;
+  .header-modal__close-btn:hover &,
+  .header-modal__close-btn:focus & {
+    stroke: #c7133e;
+  }
+}
+@media screen and (min-width: 480px) {
+  .header-modal {
+    padding: 30px;
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-modal {
+    padding: 45px 30px;
+    width: 600px;
+  }
+  .header-modal__form {
+    margin-top: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .header-modal__title {
+    @include font(18px, bold, 1.2);
+  }
+  .header-modal__description {
+    @include font(14px, normal, 1.2);
+  }
+  .header-modal__input {
+    height: 40px;
+    @include font(16px, normal, 1.2);
+  }
+  .header-modal__textarea {
+    height: 100px;
+    @include font(16px, normal, 1.2);
+  }
+  .header-modal__comment,
+  .header-modal__agreement,
+  .header-modal__form-btn {
+    grid-column: 1/-1;
+  }
+  .header-checkbox__icon {
+    height: 16px;
+    width: 16px;
+  }
+  .header-modal-checkbox__text {
+    @include font(16px, normal, 1.2);
+  }
+  .header-modal__form-btn {
+    margin-top: 15px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-modal {
+    width: 700px;
+  }
+  .header-modal__title {
+    @include font(22px, bold, 1.2);
+  }
+
+  .header-modal__textarea {
+    height: 130px;
+  }
+  .header-modal__form-btn {
+    margin-top: 20px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  font-family: $primary-font;
+  color: $default-text-color;
+  background-color: $primary-bgc;
+
+  @media screen and (max-width: 1279px) {
+    &.menu-open {
+      overflow: hidden;
+    }
+  }
+  &.header-modal-open, &.about-modal-open {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

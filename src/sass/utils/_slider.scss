@@ -1,0 +1,35 @@
+.reviews__list .slick-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    margin-top: 35px;
+  }
+}
+
+.reviews__list .slick-dots li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.reviews__list .slick-dots button {
+  font-size: 0%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  color: $slider-dots;
+  border: none;
+}
+.reviews__list .slick-dots li.slick-active {
+  background-image: url(../images/reviews/slick-home.svg);
+  //   border-radius: 0;
+  width: 12px;
+  height: 12px;
+  background-position: left bottom;
+  padding: 0;
+}
+li.slick-active > button {
+  background-color: transparent;
+}

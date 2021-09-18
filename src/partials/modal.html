@@ -1,0 +1,59 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close-button" data-modal-close>
+      <svg class="modal-close__btn-icon">
+        <use href="images/svg/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <b class="modal__discription">Thank you for your cooperation with us</b>
+    <form action="#" class="modal-form">
+      <label class="modal-form__field">
+        Name
+        <span class="modal-form__block">
+          <input type="text" name="user-name" class="modal-form__input" required minlength="3" />
+        </span>
+      </label>
+
+      <label class="modal-form__field">
+        Telephone
+        <span class="modal-form__block">
+          <input
+            type="tel"
+            name="user-phone"
+            class="modal-form__input"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            title="098-111-11-11"
+            required
+          />
+        </span>
+      </label>
+
+      <label class="modal-form__field">
+        Email
+        <span class="modal-form__block">
+          <input type="email" name="user-mail" class="modal-form__input" required />
+        </span>
+      </label>
+
+      <label class="modal-form__field">
+        Comment
+        <textarea
+          name="user-coment"
+          class="modal-form__coment"
+          placeholder="Enter comment"
+        ></textarea>
+      </label>
+      <input
+        type="checkbox"
+        id="user-term"
+        name="user-check"
+        class="modal-form__check visually-hidden"
+        required
+      />
+      <label for="user-term" class="modal-form__check-desc"
+        >I accept the terms of the contract
+      </label>
+      <button type="submit" class="modal-form__button btn--secondary btn">Submit</button>
+    </form>
+  </div>
+</div>

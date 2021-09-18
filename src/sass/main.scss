@@ -1,0 +1,25 @@
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/slider';
+@import './base/common';
+@import './base/section';
+@import './base/container';
+@import './base/button'; //for common styles for page buttons @RomanKruk
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/reviews';
+@import './layout/contacts';
+@import './layout/footer';
+@import './utils/modal';
+
+@import './utils/modal-about';
+
+@import './layout/header-modal';
+
+@import './utils/modal-map';
+@import './utils/on-top-button';
